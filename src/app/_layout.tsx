@@ -6,7 +6,7 @@ import 'react-native-get-random-values';
 import { Provider } from 'react-redux';
 import AddModal from '../components/Modals/AddModal';
 import { store } from '../redux/store';
-import { COLORS, SPACING_HORIZONTAL } from '../styles/constants';
+import { COLORS, FONT_SIZE, FONT_WEIGHT, SPACING_HORIZONTAL } from '../styles/constants';
 
 export default function RootLayout() {
 
@@ -24,12 +24,20 @@ export default function RootLayout() {
           backgroundColor: COLORS.blue,
           borderWidth: 0,
         },
+        tabBarLabelStyle: {
+          fontSize: FONT_SIZE.small,
+          fontWeight: FONT_WEIGHT.bold,
+        },
+        headerTitleStyle: {
+          fontSize: FONT_SIZE.large,
+          fontWeight: FONT_WEIGHT.bold,
+        },
         headerRight: () => (
           <Pressable
             onPress={() => setModalIsVisible(true)}
             style={{marginRight: SPACING_HORIZONTAL.small}}
           >
-            <Ionicons name="add" size={20} color={COLORS.white}/>
+            <Ionicons name="add" size={FONT_SIZE.extraLarge} color={COLORS.white}/>
           </Pressable>
         ),
         headerTintColor: COLORS.white,
@@ -42,7 +50,7 @@ export default function RootLayout() {
           options={{
             title: 'Recent',
             headerTitle: 'Recent Expenses',
-            tabBarIcon: ({color}) => <Ionicons name="hourglass-outline" color={color}/>,
+            tabBarIcon: ({color}) => <Ionicons name="hourglass-outline" color={color} size={FONT_SIZE.large}/>,
           }}
         />
         <Tabs.Screen 
@@ -50,7 +58,7 @@ export default function RootLayout() {
           options={{
             title: 'All Expenses',
             headerTitle: 'All Expenses',
-            tabBarIcon: ({color}) => <Ionicons name="calendar" color={color}/>,
+            tabBarIcon: ({color}) => <Ionicons name="calendar" color={color} size={FONT_SIZE.large}/>,
           }}
         />
       </Tabs>
