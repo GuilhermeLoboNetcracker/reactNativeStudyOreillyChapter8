@@ -1,5 +1,5 @@
 import { StyleSheet } from "react-native";
-import { BORDER_RADIUS, COLORS, SPACING } from '../../styles/constants';
+import { BORDER_RADIUS, COLORS, SPACING_HORIZONTAL, SPACING_VERTICAL } from '../../styles/constants';
 
 const styles = StyleSheet.create({
     modal: {
@@ -11,7 +11,7 @@ const styles = StyleSheet.create({
         backgroundColor: COLORS.blue,
         justifyContent: 'center',
         alignItems: 'center',
-        paddingVertical: SPACING.small,
+        paddingVertical: SPACING_VERTICAL.small,
     },
     modalHeaderTitle: {
         color: COLORS.white,
@@ -20,20 +20,21 @@ const styles = StyleSheet.create({
         flex: 1,
         backgroundColor: COLORS.dark_blue,
         alignItems: 'center',
-        gap: SPACING.small,
+        gap: SPACING_VERTICAL.small,
     },
     modalBodyInput: {
         width: '80%',
-        marginTop: SPACING.small,
+        marginTop: SPACING_VERTICAL.small,
         borderColor: COLORS.grey,
         borderWidth: 1,
         borderRadius: BORDER_RADIUS.extra_small,
-        padding: SPACING.extraSmall,
+        paddingHorizontal: SPACING_HORIZONTAL.extra_small,
+        paddingVertical: SPACING_VERTICAL.extra_small,
         color: COLORS.white,
     },
     modalBodyButtonsWrapper: {
         flexDirection: 'row',
-        gap: SPACING.small,
+        gap: SPACING_HORIZONTAL.small,
         alignItems: 'center',
     },
     modalBodySeparator: {

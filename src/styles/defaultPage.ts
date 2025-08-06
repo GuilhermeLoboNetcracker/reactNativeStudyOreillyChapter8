@@ -1,11 +1,12 @@
 import { StyleSheet } from "react-native";
-import { COLORS, SPACING } from '../styles/constants';
+import { COLORS, SPACING_HORIZONTAL, SPACING_VERTICAL } from '../styles/constants';
 
 const defaultPageStyles = StyleSheet.create({
     container: {
         flex: 1,
         backgroundColor: COLORS.dark_blue,
-        padding: SPACING.small,
+        paddingHorizontal: SPACING_HORIZONTAL.small,
+        paddingVertical: SPACING_VERTICAL.small,
         alignItems: 'center',
     }
 });

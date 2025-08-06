@@ -6,7 +6,7 @@ import 'react-native-get-random-values';
 import { Provider } from 'react-redux';
 import AddModal from '../components/Modals/AddModal';
 import { store } from '../redux/store';
-import { COLORS, SPACING } from '../styles/constants';
+import { COLORS, SPACING_HORIZONTAL } from '../styles/constants';
 
 export default function RootLayout() {
 
@@ -27,7 +27,7 @@ export default function RootLayout() {
         headerRight: () => (
           <Pressable
             onPress={() => setModalIsVisible(true)}
-            style={{marginRight: SPACING.small}}
+            style={{marginRight: SPACING_HORIZONTAL.small}}
           >
             <Ionicons name="add" size={20} color={COLORS.white}/>
           </Pressable>

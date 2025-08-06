@@ -1,4 +1,4 @@
-import { SPACING } from '@/src/styles/constants';
+import { SPACING_VERTICAL } from '@/src/styles/constants';
 import { FlatList, View } from 'react-native';
 import expenseState from '../../types/expenseType';
 import ExpensesCard from '../ExpensesCard';
@@ -18,7 +18,7 @@ export default function ExpensesList({list, totalValue}: ExpensesListProps) {
         renderItem={ ({item}) =>
             <ExpensesCard id={item.id} date={item.date} title={item.title} value={item.value}/>
         }
-        ItemSeparatorComponent={() => <View style={{marginVertical: SPACING.extraSmall}}/>}
+        ItemSeparatorComponent={() => <View style={{marginVertical: SPACING_VERTICAL.extra_small}}/>}
         ListHeaderComponent={ <TotalValueBox text="Last 7 Days" value={totalValue}/>}
     />
   )
